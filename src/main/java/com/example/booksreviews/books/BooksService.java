@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Month;
 import java.time.LocalDate;
@@ -38,5 +39,11 @@ public class BooksService {
         if(isPresent) {
             this._booksRepository.deleteById(bookId);
         }
+    }
+
+    @Transactional
+    public void updateBook(Long bookId, Book aBook) {
+        Book bk = this._booksRepository.findById(bookId).orElseThrow(() -> new IllegalStateException("No book with such id"));
+        bk.setName(aBook.getName());
     }
 }

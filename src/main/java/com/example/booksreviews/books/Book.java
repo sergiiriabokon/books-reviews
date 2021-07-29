@@ -1,6 +1,7 @@
 package com.example.booksreviews.books;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -54,6 +55,10 @@ public class Book {
 
     public String getAuthor() {
         return author;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
