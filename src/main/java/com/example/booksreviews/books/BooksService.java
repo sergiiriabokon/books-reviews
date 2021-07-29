@@ -32,4 +32,11 @@ public class BooksService {
         this._booksRepository.save(aBook);
         System.out.println(aBook);
     }
+
+    public void deleteBook(Long bookId) {
+        boolean isPresent = this._booksRepository.existsById(bookId);
+        if(isPresent) {
+            this._booksRepository.deleteById(bookId);
+        }
+    }
 }
