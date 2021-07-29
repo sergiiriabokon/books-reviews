@@ -18,7 +18,7 @@ Content-Type: application/json
 
 {
     "id": 3,
-    "name": "Maltas Spitfire",
+    "name": "Maltease Spitfire",
     "publishedDate": "1943-07-07",
     "author": "Beurling"
 }
